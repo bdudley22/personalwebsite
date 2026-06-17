@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Brooks Dudley -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/print.css" media="print">
+    <meta name="description" content="Brooks Dudley portfolio - game development projects and software work.">
+    <meta name="keywords" content="game development, portfolio, Java, Python, UNCW, Brooks Dudley">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brooks Dudleys awesome website</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h2>Wow awesome website</h2>
+            <p><strong>I like making games, and other things.</strong></p> 
+        </header>
+        <nav> 
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li>
+                    <a href="projects.html">Code stuff &#9660;</a> 
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li> 
+                    </ul>
+                </li>
+                <li><a href="chicken.html">Chicken? chicken.</a></li>
+                <li><a href="contact.html">Contact</a></li> 
+            </ul>
+        </nav>
+        <main>
+            <section class="intro"> 
+                <aside>
+                    <h2>Hello, I'm Brooks Dudley</h2>
+                    <p>Senior software engineering major at UNCW.</p>
+                    <p>Focused on Games, Python, JavaScript and software architecture.</p>
+                    <button class="glow-on-hover print-btn">Print Page</button>
+                    <a href="projects.html" class="glow-on-hover cta-btn">View My Projects</a>
+                </aside>
+                <img src="images/game.gif" 
+                     alt="game"
+                     class="responsive-img"> 
+                <img src="images/dm.gif" alt="light/dark button">
+            </section>
+        </main>
+        <!--button script borrowed from https://dev.to/webdeasy/top-20-css-buttons-animations-f41-->
+        <script>
+        document.querySelectorAll('.glow-on-hover').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                if (btn.classList.contains('print-btn')) {
+                    window.print();
+                    return;
+                }
+
+                const text = btn.nextElementSibling;
+                if (text) {
+                    text.style.display = text.style.display === 'block' ? 'none' : 'block';
+                }
+            });
+        });
+        </script>
+        <footer>
+            <p>© 2026 Brooks Dudley | Go panthers.</p>
+        </footer>
+    </div>
+</body>
+</html>

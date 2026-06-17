@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="description" content="Current game projects by Brooks Dudley">
+    <meta name="keywords" content="game projects, portfolio, development">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Projects</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="projects-page">
+    <div class="page">
+        <header>
+            <h2>My Current Projects</h2>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="active">Code stuff &#9660;</a>
+                    <ul>
+                        <li><a href="projects.html" class="active">Projects</a></li>
+                    </ul>
+                </li>
+                <li><a href="chicken.html">Chicken? chicken.</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name of my projects in order (top to bottom)</th>
+                    <th>A lil summary</th>
+                    <th>Code language</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Max's adventure</td>
+                    <td>A side scroller action game</td>
+                    <td>Python</td>
+                </tr>
+                <tr>
+                    <td>Galagaa (not galaga)</td>
+                    <td>A simple fun pygame recreation of one of my favorite arcade games</td>
+                    <td>Python</td>
+                </tr>
+                <tr>
+                    <td>Max's adventure pt.2</td>
+                    <td>A little demo of a boss fight</td>
+                    <td>Python</td>
+                </tr>
+                <tr>
+                    <td>Daily Gambling site</td>
+                    <td>A for fun daily gambling site I made</td>
+                    <td>HTML/CSS/JavaScript</td>
+                </tr>
+                <tr>
+                    <td>Magic the Gathering role selection site</td>
+                    <td>A simple website I made for my family/friends to play a game I made</td>
+                    <td>HTML/CSS/JavaScript + SupaBase backend implementation</td>
+                </tr>
+            </tbody>
+        </table>
+        <main class="projects-layout">
+            <section class="projects">
+                <div class="project-card">
+                    <img src="images/game.gif" alt="Game1" class="responsive-img">
+                    <button class="glow-on-hover">View</button>
+                    <p class="hidden-text">Max's adventure in the dungeon.</p>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/galaga.gif" alt="game2" class="responsive-img">
+                    <button class="glow-on-hover">View</button>
+                    <p class="hidden-text">Galaga game, using assets made entirely by me.</p>
+                    <a href="https://github.com/bdudley22/galaga" class="hidden-text" target="_blank">Download and play here!</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/boss.gif" alt="Game3" class="responsive-img">
+                    <button class="glow-on-hover">View</button>
+                    <p class="hidden-text">Max's adventure boss demo</p>
+                </div>
+                <div class="project-card">
+                    <img src="images/gamble.png" id="Gamble" alt="gamble!" class=""responsive-img>
+                    <button class="glow-on-hover">View</button>
+                    <p class="hidden-text">https://dailygamble.win/</p>
+                </div>
+            </section>
+
+            <aside class="power-container">
+                <img src="images/myalien600.gif" alt="alien" class="alien a1"> <!--ALIENS!!!!!!!!!!!-->
+                <img src="images/myalien600.gif" alt="alien" class="alien a2">
+                
+                <img src="images/myalien600.gif" alt="alien" class="alien a4">
+                <img src="images/myalien600.gif" alt="alien" class="alien a5_upright">
+            </aside>
+        </main>
+        <!--button script borrowed from https://dev.to/webdeasy/top-20-css-buttons-animations-f41 (slightly modified to show multiple things with a .foreach)-->
+       <script> 
+        document.querySelectorAll('.glow-on-hover').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const card = btn.parentElement;
+                const hiddenItems = card.querySelectorAll('.hidden-text');
+
+                hiddenItems.forEach((el) => {
+                    el.style.display = el.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+        </script>
+        <footer>
+            <p>© 2026 Brooks Dudley</p>
+        </footer>
+    </div>
+</body>
+</html>
